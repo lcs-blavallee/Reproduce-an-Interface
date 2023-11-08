@@ -11,6 +11,7 @@
 		1A030D682AFBCB02009EE819 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A030D672AFBCB02009EE819 /* ContentView.swift */; };
 		1A030D6A2AFBCB03009EE819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A030D692AFBCB03009EE819 /* Assets.xcassets */; };
 		1A030D6D2AFBCB03009EE819 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A030D6C2AFBCB03009EE819 /* Preview Assets.xcassets */; };
+		1A030D742AFBCC3D009EE819 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A030D732AFBCC3D009EE819 /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1A030D672AFBCB02009EE819 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A030D692AFBCB03009EE819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A030D6C2AFBCB03009EE819 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A030D732AFBCC3D009EE819 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				1A030D672AFBCB02009EE819 /* ContentView.swift */,
 				1A030D692AFBCB03009EE819 /* Assets.xcassets */,
 				1A030D6B2AFBCB03009EE819 /* Preview Content */,
+				1A030D732AFBCC3D009EE819 /* WeatherView.swift */,
 			);
 			path = "Reproduce an Interface";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A030D742AFBCC3D009EE819 /* WeatherView.swift in Sources */,
 				1A030D682AFBCB02009EE819 /* ContentView.swift in Sources */,
 				1A030D662AFBCB02009EE819 /* Reproduce_an_InterfaceApp.swift in Sources */,
 			);
