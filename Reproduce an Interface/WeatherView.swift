@@ -22,48 +22,47 @@ struct Weatheriew: View {
     // Returns the button's user interface...
     var body: some View {
         ZStack {
-                RoundedRectangle(cornerRadius: 25.0)
-                    .frame(width: 350, height: 140)
-                    .overlay{
-                        Image(tempPic)
-                            .resizable()
-                            .frame(width: 350, height: 140)
-                            .cornerRadius(25.0)
-            }
+            RoundedRectangle(cornerRadius: 25.0)
+                .overlay{
+                    Image(tempPic)
+                        .cornerRadius(25.0)
+                }
             HStack {
-                VStack {
+                VStack (alignment: .leading) {
                     Text(location)
                         .foregroundStyle(Color.white)
                         .font(.system(size: 25))
-                    
-                    .bold()
+                        .bold()
                     Text(timeAtLocation)
-                    .foregroundStyle(Color.white)
-                    .font(.system(size: 15))
-                    .bold()
+                        .foregroundStyle(Color.white)
+                        .font(.system(size: 15))
+                        .bold()
+                    Spacer()
                     Text(expectedForecast)
-                    .foregroundStyle(Color.white)
-                    .font(.system(size: 10))
-                    .bold()
+                        .foregroundStyle(Color.white)
+                        .font(.system(size: 15))
+                        .bold()
                 }
-                VStack{
+                Spacer()
+                VStack (alignment: .trailing) {
                     Text(currentTemp)
-                    .foregroundStyle(Color.white)
-                    .font(.system(size: 50))
+                        .foregroundStyle(Color.white)
+                        .font(.system(size: 50))
+                    Spacer()
                     Text(highTemp)
-                    .foregroundStyle(Color.white)
-                    .font(.system(size: 15))
-                    .bold()
+                        .foregroundStyle(Color.white)
+                        .font(.system(size: 15))
+                        .bold()
                     Text(lowTemp)
-                    .foregroundStyle(Color.white)
-                    .font(.system(size: 15))
-                    .bold()
+                        .foregroundStyle(Color.white)
+                        .font(.system(size: 15))
+                        .bold()
                     
                 }
             }
-
+            
         }
-
+        
         
     }
 }
