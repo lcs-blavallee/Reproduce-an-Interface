@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
+       
             NavigationStack {
+                ZStack {
+                    Color.black
+                        .ignoresSafeArea()
                 VStack (spacing: 2) {
                     HStack {
                         Text("Weather")
