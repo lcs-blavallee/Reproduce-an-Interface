@@ -9,20 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       
-            NavigationStack {
-                ZStack {
-                    Color.black
-                        .ignoresSafeArea()
+        
+        NavigationStack {
+            ZStack {
+                Color.black
+                    .ignoresSafeArea()
                 VStack (spacing: 2) {
-                    HStack {
-                        Text("Weather")
-                            .font(.system(size: 35))
-                            .bold()
-                            .padding(.leading, 20)
-                            .foregroundStyle(Color.white)
-                        Spacer()
-                    }
                     List {
                         Group {
                             
@@ -32,8 +24,9 @@ struct ContentView: View {
                             Weatheriew(tempPic: "raincloud", location: "Kitchener", timeAtLocation: "6:08 AM", expectedForecast: "Light rain for the next hour", currentTemp: "5°", highTemp: "H:12°", lowTemp: "L:5°")
                             Weatheriew(tempPic: "raincloud", location: "Smith-Ennismore-Lakefield", timeAtLocation: "6:08 AM", expectedForecast: "Expect flurries in the next hour", currentTemp: "1°", highTemp: "H:11°", lowTemp: "L:1°")
                         }
-
+                        
                     }
+                    .searchable(text: .constant(""), prompt: "Search for any city or airport")
                     .listStyle(.automatic)
                     .listRowSpacing(12)
                     .background(Color.black)
@@ -55,12 +48,12 @@ struct ContentView: View {
                 }
                 
             }
-            .background(Color.black)
+            .navigationTitle("Weather")
         }
-        .font(.title)
     }
 }
 
 #Preview {
     ContentView()
+        .preferredColorScheme(.dark)
 }
