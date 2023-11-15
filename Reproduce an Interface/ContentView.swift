@@ -19,19 +19,24 @@ struct ContentView: View {
                             .font(.system(size: 35))
                             .bold()
                             .padding(.leading, 20)
-                            .foregroundStyle(Color(.black))
+                            .foregroundStyle(Color.white)
                         Spacer()
                     }
                     List {
-                        Weatheriew(tempPic: "raincloud", location: "My Location", timeAtLocation: "Lakefield", expectedForecast: "Expect flurries in the next hour", currentTemp: "1°", highTemp: "H:11°", lowTemp: "L:1°")
-                        Weatheriew(tempPic: "raincloud", location: "Toronto", timeAtLocation: "6:08 AM", expectedForecast: "Expect light rain in the next hour", currentTemp: "7°", highTemp: "H:12°", lowTemp: "L:7°")
-                        Weatheriew(tempPic: "raincloud", location: "Hamilton", timeAtLocation: "6:08 AM", expectedForecast: "Expect light rain in the next hour", currentTemp: "6°", highTemp: "H:13°", lowTemp: "L:5°")
-                        Weatheriew(tempPic: "raincloud", location: "Kitchener", timeAtLocation: "6:08 AM", expectedForecast: "Light rain for the next hour", currentTemp: "5°", highTemp: "H:12°", lowTemp: "L:5°")
-                        Weatheriew(tempPic: "raincloud", location: "Smith-Ennismore-Lakefield", timeAtLocation: "6:08 AM", expectedForecast: "Expect flurries in the next hour", currentTemp: "1°", highTemp: "H:11°", lowTemp: "L:1°")
+                        Group {
+                            
+                            Weatheriew(tempPic: "raincloud", location: "My Location", timeAtLocation: "Lakefield", expectedForecast: "Expect flurries in the next hour", currentTemp: "1°", highTemp: "H:11°", lowTemp: "L:1°")
+                            Weatheriew(tempPic: "raincloud", location: "Toronto", timeAtLocation: "6:08 AM", expectedForecast: "Expect light rain in the next hour", currentTemp: "7°", highTemp: "H:12°", lowTemp: "L:7°")
+                            Weatheriew(tempPic: "raincloud", location: "Hamilton", timeAtLocation: "6:08 AM", expectedForecast: "Expect light rain in the next hour", currentTemp: "6°", highTemp: "H:13°", lowTemp: "L:5°")
+                            Weatheriew(tempPic: "raincloud", location: "Kitchener", timeAtLocation: "6:08 AM", expectedForecast: "Light rain for the next hour", currentTemp: "5°", highTemp: "H:12°", lowTemp: "L:5°")
+                            Weatheriew(tempPic: "raincloud", location: "Smith-Ennismore-Lakefield", timeAtLocation: "6:08 AM", expectedForecast: "Expect flurries in the next hour", currentTemp: "1°", highTemp: "H:11°", lowTemp: "L:1°")
+                        }
+
                     }
                     .listStyle(.automatic)
                     .listRowSpacing(12)
                     .background(Color.black)
+                    .scrollContentBackground(.hidden)
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
                             VStack {
@@ -41,7 +46,7 @@ struct ContentView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 25)
-                                        .foregroundStyle(Color.black)
+                                        .foregroundStyle(Color.white)
                                 }
                             }
                         }
@@ -49,7 +54,7 @@ struct ContentView: View {
                 }
                 
             }
-            
+            .background(Color.black)
         }
         .font(.title)
     }
